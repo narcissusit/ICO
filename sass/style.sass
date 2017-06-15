@@ -1,0 +1,393 @@
+*
+	box-sizing: border-box
+
+body
+	min-width: 320px
+	padding: 0
+	margin: 0
+
+.wrap
+	max-width: 960px
+	margin: auto
+	padding: 10px
+
+header
+	background:
+		image: url('../images/people.jpg')
+		repeat: no-repeat
+		size: cover
+		position: center
+	.head_block
+		display: flex
+		justify-content: space-between
+		position: fixed
+		z-index: 3
+		background-color: rgba(125, 125, 125, 0.35)
+		width: 100%
+		padding: 5px 30px  
+		.logo
+			font:
+				size: 70px
+				family: Tahoma
+			a
+				text-decoration: none
+				display: block
+				color: #fff
+		.mob_menu
+			position: fixed
+			right: 20px
+			&::before
+				content: ''
+				display: inline-block
+				background-image: url('../images/sprite.png')
+				width: 45px
+				height: 31px
+				margin-top: 28px
+			&:hover
+				cursor: pointer
+		.main_menu
+			position: fixed
+			z-index: 5
+			top: -100vh
+			left: 0
+			width: 100vw
+			height: 100vh
+			background-color: #2a2a2a
+			.header_menu
+				margin-top: 30px
+				list-style-type: none
+				padding: 0
+				li
+					text-align: center
+					margin: 20px
+					&:not(:last-child)::after
+						content: ''
+						border-top: 3px solid #fff
+						width: 7%
+						margin: 15px auto
+						display: block
+					&:last-child
+						position: absolute
+						margin: 0
+						background: red
+						left: 0
+						right: 0
+						bottom: 0
+						padding: 30px
+					a
+						text-align: center
+						text-decoration: none
+						font-family: Tahoma
+						font-size: 30px
+						color: #fff
+						&:hover
+							color: #e1382d
+			&::before
+				content: ''
+				background:
+					image: url('../images/sprite.png')
+					position: -50px 0
+				width: 31px
+				height: 31px
+				display: block
+				position: absolute
+				top: 20px
+				right: 40px
+
+.main_header
+	background-color: rgba(76, 68, 68, 0.68)
+.header_content
+	margin: 200px auto 200px
+	h1
+		color: #e1382d
+		text-align: center
+		font:
+			family: Tahoma
+			size: 50px
+	p
+		color: #cacaca
+		text-align: center
+		font:
+			family: Tahoma
+			size: 20px
+	.scroll_pointer
+		display: block
+		z-index: 0
+		&::before
+			content: ''
+			background:
+				image: url('../images/sprite.png')
+				position: -86px 0
+			width: 35px
+			height: 18px
+			display: none
+			margin: 200px auto 0
+		&:hover
+			cursor: pointer
+
+.what_block
+	background-color: #dddddd
+	padding: 100px 0
+
+.what_block, .why_block, .plan_block, .to_do
+	h2
+		font:
+			size: 30px
+			family: Arial
+		color: #e1382d
+
+	p
+		font:
+			size: 20px
+			family: Arial
+
+	.time_img
+		margin: auto
+		max-width: 100%
+		img
+			width: 100%
+			margin: auto
+
+.why_block
+	.reasons
+		.time_reason, .indiv_reason, .easy_reason
+			&::before
+				content: ''
+				display: block
+				background-image: url('../images/sprite.png')
+				margin: auto
+
+.why_add_block
+	background-color: rgba(255, 222, 222, 0.38)
+	padding: 150px 0 100px
+
+.why_block
+	text-align: center
+	h3
+		font:
+			size: 25px
+			family: Arial
+	background:
+		image: url('../images/fon.jpg')
+		repeat: no-repeat
+		size: cover
+		position: center
+	.reasons
+		padding: 80px 0
+		.time_reason
+			&::before
+				background-position: 0 -36px
+				width: 55px
+				height: 60px
+		.indiv_reason
+			&::before
+				background-position: -59px -36px
+				width: 56px
+				height: 64px
+		.easy_reason
+			&::before
+				background-position: -120px -36px
+				width: 63px
+				height: 73px
+
+.plan_block
+	text-align: center
+	padding-top: 90px
+	.small_start, .golden_standart, .advanced, .customized
+		background:
+			repeat: no-repeat
+			size: cover
+			position: center
+		position: relative
+	.small_start
+		background-image: url('../images/smart.jpg')
+	.golden_standart
+		background-image: url('../images/gold.jpg')
+	.advanced
+		background-image: url('../images/advanced.jpg')
+	.customized
+		background-image: url('../images/customized.jpg')
+	h3, p, ul, li
+		margin: 0
+		padding: 0
+	.packets_content
+		background-color: rgba(76, 68, 68, 0.6)
+		height: 100%
+		padding: 30px 30px 150px
+		h3
+			padding: 10px
+			font:
+				size: 25px
+				family: 'Roboto'
+			color: #fff
+		ul
+			list-style-type: none
+			padding: 15px
+			li
+				font:
+					size: 15px
+					family: 'Roboto'
+				color: #c2c2c2
+				padding: 5px
+		p
+			color: #fff
+			font:
+				size: 20px
+				family: 'Roboto'
+
+		.enter
+			position: absolute
+			bottom: 40px
+			left: 0
+			right: 0
+			width: 50%
+			margin: auto
+			text-align: center
+			padding: 30px
+			border: none
+			background-color: #e1382d
+			font:
+				size: 20px
+				family: 'Roboto'
+			color: #fff
+			border-radius: 16px
+			&:hover
+				cursor: pointer
+	.plan_description
+		padding: 40px
+
+.modal-description
+	p
+		font:
+			size: 10px
+			family: 'Roboto'
+.btn
+	background-color: #e1382d
+	color: #fff
+
+.wrapper_to_do
+	max-width: 760px
+	margin: 0 auto
+
+.to_do
+	padding: 150px 0
+	h2
+		padding: 100px 20px
+		text-align: center
+	background:
+		image: url('../images/full01.jpg')
+		repeat: no-repeat
+		size: cover
+		position: center
+	.to_do_list
+		display: inline-block
+		padding: 30px 0
+		h3
+			font:
+				size: 20px
+				family: 'Roboto'
+				weight: 800
+			padding-bottom: 10px
+			margin: 0 30px
+		p
+			font:
+				size: 18px
+		&::before
+			content: ''
+			background:
+				image: url('../images/sprite.png')
+				position: -188px -36px
+			width: 76px
+			height: 100px
+			display: inline-block
+			float: left
+			margin: 10px
+
+.contacts
+	text-align: center
+	background-color: #251615
+	color: #fff
+	text-align: center
+	padding: 100px 20px
+	h2
+		text-transform: uppercase
+	p
+		margin: 0
+		font:
+			size: 25px
+			family: 'Roboto'
+.social_networks
+	.facebook::before, .linkedin::before, .telegram::before
+		content: ''
+		display: inline-block
+		background-image: url('../images/sprite.png')
+		width: 54px
+		height: 54px
+	.facebook::before
+		background-position: 0 -114px
+	.linkedin::before
+		background-position: -60px -114px
+	.telegram::before
+		background-position: -120px -114px
+
+header .head_block .main_menu .header_menu li:last-child a:hover
+	color: #747474
+
+
+
+@media(min-width: 860px)
+	.mob_menu
+		display: none
+	.logo
+		padding: 0
+	header
+		.head_block
+			align-items: center
+			.main_menu
+				position: static
+				margin-left: 100px
+				background: none
+				width: auto
+				height: auto
+				vertical-align: middle
+				.header_menu
+					margin: 0
+					li
+						padding: 0
+						display: inline-block
+						&:not(:last-child)::after
+							display: none
+						a
+							vertical-align: middle
+							font-size: 20px
+						&:last-child
+							position: static
+							padding: 20px
+							border-radius: 8px
+				&::before
+					position: static
+					display: none
+	.header_content
+		.scroll_pointer
+			&::before
+				display: block
+	.what_block
+		.wrap
+			display: flex
+	.why_block
+		.reasons
+			display: flex
+			align-content: center
+	.packets
+		display: flex
+		flex-wrap: wrap
+		.small_start, .golden_standart, .advanced, .customized
+			width: 50%
+
+@media(min-width: 1024px)
+	.packets
+		flex-wrap: nowrap	
+	
+
+
+
